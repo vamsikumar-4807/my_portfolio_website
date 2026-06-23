@@ -839,11 +839,12 @@ function Certifications() {
           {CERTS.map((c, i) => (
             <Reveal key={c.name} delay={i * 0.05}>
               <Tilt>
+                <BackgroundGradient containerClassName="rounded-2xl h-full" className="rounded-2xl h-full bg-background/80">
                 <a
                   href={c.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block glass-strong rounded-2xl p-6 h-full hover:border-primary/40 border border-transparent transition-all group"
+                  className="block rounded-2xl p-6 h-full group"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-lg shadow-lg shadow-primary/30">
@@ -862,6 +863,7 @@ function Certifications() {
                     Verify <span>→</span>
                   </div>
                 </a>
+                </BackgroundGradient>
               </Tilt>
             </Reveal>
           ))}
