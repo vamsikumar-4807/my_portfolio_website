@@ -305,16 +305,20 @@ function Navbar() {
             </span>
           </button>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-2">
             {NAV.map((n) => (
-              <button
+              <BackgroundGradient
                 key={n.id}
-                onClick={() => scrollTo(n.id)}
-                className="relative px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group"
+                containerClassName="rounded-full p-[1.5px]"
+                className="rounded-full"
               >
-                {n.label}
-                <span className="absolute inset-x-4 -bottom-0.5 h-px scale-x-0 bg-gradient-to-r from-primary to-accent transition-transform duration-300 group-hover:scale-x-100" />
-              </button>
+                <button
+                  onClick={() => scrollTo(n.id)}
+                  className="relative px-4 py-1.5 text-sm font-medium rounded-full bg-background/80 backdrop-blur text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {n.label}
+                </button>
+              </BackgroundGradient>
             ))}
           </nav>
 
