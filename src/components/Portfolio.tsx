@@ -663,7 +663,8 @@ function Skills() {
           {entries.map(([cat, items], i) => (
             <Reveal key={cat} delay={i * 0.08}>
               <Tilt>
-                <div className="glass-strong rounded-2xl p-6 h-full hover:border-primary/40 border border-transparent transition-colors">
+                <BackgroundGradient containerClassName="rounded-2xl h-full" className="rounded-2xl h-full bg-background/80">
+                <div className="rounded-2xl p-6 h-full">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center font-display font-bold text-sm animate-float">
                       {cat[0]}
@@ -681,6 +682,7 @@ function Skills() {
                     ))}
                   </div>
                 </div>
+                </BackgroundGradient>
               </Tilt>
             </Reveal>
           ))}
@@ -803,13 +805,15 @@ function Education() {
                   </div>
                   <div className="md:w-1/2 md:px-8">
                     <Tilt>
-                      <div className="glass-strong rounded-2xl p-6 hover:border-primary/40 border border-transparent transition-colors">
+                      <BackgroundGradient containerClassName="rounded-2xl" className="rounded-2xl bg-background/80">
+                      <div className="rounded-2xl p-6">
                         <div className="text-xs font-mono text-accent uppercase tracking-widest">{e.status}</div>
                         <h3 className="mt-2 font-display text-lg font-semibold">{e.degree}</h3>
                         <div className="text-sm text-foreground/80 mt-1">{e.institute}</div>
                         <div className="text-xs text-muted-foreground font-mono mt-1">{e.location}</div>
                         {e.description && <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{e.description}</p>}
                       </div>
+                      </BackgroundGradient>
                     </Tilt>
                   </div>
                 </div>
@@ -835,11 +839,12 @@ function Certifications() {
           {CERTS.map((c, i) => (
             <Reveal key={c.name} delay={i * 0.05}>
               <Tilt>
+                <BackgroundGradient containerClassName="rounded-2xl h-full" className="rounded-2xl h-full bg-background/80">
                 <a
                   href={c.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block glass-strong rounded-2xl p-6 h-full hover:border-primary/40 border border-transparent transition-all group"
+                  className="block rounded-2xl p-6 h-full group"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-lg shadow-lg shadow-primary/30">
@@ -858,6 +863,7 @@ function Certifications() {
                     Verify <span>→</span>
                   </div>
                 </a>
+                </BackgroundGradient>
               </Tilt>
             </Reveal>
           ))}
@@ -923,7 +929,8 @@ function CTAContact() {
               ].map((c) => {
                 const Inner = (
                   <Tilt>
-                    <div className="glass-strong rounded-2xl p-5 flex items-center gap-4 hover:border-primary/40 border border-transparent transition-colors">
+                    <BackgroundGradient containerClassName="rounded-2xl" className="rounded-2xl bg-background/80">
+                    <div className="rounded-2xl p-5 flex items-center gap-4">
                       <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center font-display font-bold">
                         {c.i}
                       </div>
@@ -932,6 +939,7 @@ function CTAContact() {
                         <div className="font-medium truncate">{c.v}</div>
                       </div>
                     </div>
+                    </BackgroundGradient>
                   </Tilt>
                 );
                 return c.h ? (
