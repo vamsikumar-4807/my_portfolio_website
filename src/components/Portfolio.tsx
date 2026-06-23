@@ -663,7 +663,8 @@ function Skills() {
           {entries.map(([cat, items], i) => (
             <Reveal key={cat} delay={i * 0.08}>
               <Tilt>
-                <div className="glass-strong rounded-2xl p-6 h-full hover:border-primary/40 border border-transparent transition-colors">
+                <BackgroundGradient containerClassName="rounded-2xl h-full" className="rounded-2xl h-full bg-background/80">
+                <div className="rounded-2xl p-6 h-full">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center font-display font-bold text-sm animate-float">
                       {cat[0]}
@@ -681,6 +682,7 @@ function Skills() {
                     ))}
                   </div>
                 </div>
+                </BackgroundGradient>
               </Tilt>
             </Reveal>
           ))}
