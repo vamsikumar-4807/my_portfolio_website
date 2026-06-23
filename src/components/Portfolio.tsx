@@ -610,7 +610,8 @@ function About() {
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <Reveal>
             <Tilt>
-              <div className="glass-strong rounded-3xl p-8 md:p-10 relative overflow-hidden">
+              <BackgroundGradient containerClassName="rounded-3xl" className="rounded-3xl bg-background/80">
+              <div className="rounded-3xl p-8 md:p-10 relative overflow-hidden">
                 <div className="absolute -top-20 -right-20 h-64 w-64 rounded-full bg-primary/20 blur-3xl" />
                 <p className="relative text-foreground/90 leading-relaxed text-lg">
                   Computer Science and Engineering graduate with a strong interest in <span className="text-accent font-semibold">Java Full Stack</span> and <span className="text-accent font-semibold">Frontend Development</span>.
@@ -619,6 +620,7 @@ function About() {
                   Through academic projects and hands-on experience, I've developed skills in building responsive web applications and efficient software solutions. I'm passionate about problem-solving, continuous learning, and contributing to impactful technology-driven projects.
                 </p>
               </div>
+              </BackgroundGradient>
             </Tilt>
           </Reveal>
 
@@ -626,21 +628,25 @@ function About() {
             {stats.map((s, i) => (
               <Reveal key={s.l} delay={i * 0.08}>
                 <Tilt>
-                  <div className="glass rounded-2xl p-6 text-center hover:bg-primary/5 transition-colors">
+                  <BackgroundGradient containerClassName="rounded-2xl" className="rounded-2xl bg-background/80">
+                  <div className="rounded-2xl p-6 text-center">
                     <div className="font-display text-4xl md:text-5xl font-bold gradient-text">{s.v}</div>
                     <div className="mt-2 text-xs uppercase tracking-widest text-muted-foreground font-mono">{s.l}</div>
                   </div>
+                  </BackgroundGradient>
                 </Tilt>
               </Reveal>
             ))}
             <Reveal delay={0.3}>
-              <div className="col-span-2 glass rounded-2xl p-6 flex items-center gap-4">
+              <BackgroundGradient containerClassName="rounded-2xl col-span-2" className="rounded-2xl bg-background/80">
+              <div className="rounded-2xl p-6 flex items-center gap-4">
                 <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-2xl">📍</div>
                 <div>
                   <div className="font-semibold">Tadepalligudem, India</div>
                   <div className="text-xs text-muted-foreground font-mono">Available for remote & on-site</div>
                 </div>
               </div>
+              </BackgroundGradient>
             </Reveal>
           </div>
         </div>
