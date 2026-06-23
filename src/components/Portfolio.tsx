@@ -628,21 +628,25 @@ function About() {
             {stats.map((s, i) => (
               <Reveal key={s.l} delay={i * 0.08}>
                 <Tilt>
-                  <div className="glass rounded-2xl p-6 text-center hover:bg-primary/5 transition-colors">
+                  <BackgroundGradient containerClassName="rounded-2xl" className="rounded-2xl bg-background/80">
+                  <div className="rounded-2xl p-6 text-center">
                     <div className="font-display text-4xl md:text-5xl font-bold gradient-text">{s.v}</div>
                     <div className="mt-2 text-xs uppercase tracking-widest text-muted-foreground font-mono">{s.l}</div>
                   </div>
+                  </BackgroundGradient>
                 </Tilt>
               </Reveal>
             ))}
             <Reveal delay={0.3}>
-              <div className="col-span-2 glass rounded-2xl p-6 flex items-center gap-4">
+              <BackgroundGradient containerClassName="rounded-2xl col-span-2" className="rounded-2xl bg-background/80">
+              <div className="rounded-2xl p-6 flex items-center gap-4">
                 <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-2xl">📍</div>
                 <div>
                   <div className="font-semibold">Tadepalligudem, India</div>
                   <div className="text-xs text-muted-foreground font-mono">Available for remote & on-site</div>
                 </div>
               </div>
+              </BackgroundGradient>
             </Reveal>
           </div>
         </div>
