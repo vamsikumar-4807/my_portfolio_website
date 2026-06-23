@@ -19,7 +19,7 @@ const NAV = [
   { label: "Skills", id: "skills" },
   { label: "Projects", id: "projects" },
   { label: "Education", id: "education" },
-  { label: "Certs", id: "certs" },
+  { label: "Certifications", id: "certs" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -287,10 +287,22 @@ function Navbar() {
         >
           <button
             onClick={() => scrollTo("home")}
-            className="flex items-center gap-2 transition-transform hover:scale-105"
+            className="flex items-center gap-2.5 transition-transform hover:scale-105"
             aria-label="Top of page"
           >
-            <img src={LOGO_URL} alt="TAP Academy" className="h-9 md:h-10 w-auto" />
+            <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-full p-[2px] bg-gradient-to-br from-primary via-accent to-primary shadow-[0_0_20px_-4px_hsl(var(--primary)/0.6)]">
+              <img
+                src={PROFILE_URL}
+                alt="Profile"
+                className="h-full w-full rounded-full object-cover bg-background"
+              />
+            </span>
+            <span className="hidden sm:inline-flex h-9 w-9 items-center justify-center rounded-lg glass-strong text-primary shadow-[0_0_18px_-6px_hsl(var(--primary)/0.7)]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </span>
           </button>
 
           <nav className="hidden lg:flex items-center gap-1">
