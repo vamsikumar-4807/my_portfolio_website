@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 /* -------------------------------------------------------------------------- */
 /* Data                                                                       */
