@@ -579,7 +579,7 @@ function Hero() {
                     </div>
                   </div>
                   <div className="absolute top-1/2 -left-8 animate-float" style={{ animationDelay: "1s" }}>
-                    <div className="glass-strong rounded-2xl px-3 py-2 text-xs font-mono">🚀 React</div>
+                    <div className="glass-strong rounded-2xl px-3 py-2 text-xs font-mono">🗄️ MySQL</div>
                   </div>
                 </div>
               </Tilt>
@@ -972,48 +972,58 @@ function CTAContact() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <form onSubmit={submit} className="glass-strong rounded-2xl p-6 md:p-8 space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
+            <BackgroundGradient containerClassName="rounded-2xl" className="rounded-2xl bg-background/80">
+              <form onSubmit={submit} className="rounded-2xl p-6 md:p-8 space-y-4">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <label className="block">
+                    <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Name</span>
+                    <BackgroundGradient containerClassName="rounded-xl mt-1" className="rounded-xl bg-background/80">
+                      <input
+                        required
+                        value={form.name}
+                        onChange={(e) => setForm({ ...form, name: e.target.value })}
+                        className="w-full rounded-xl bg-transparent px-4 py-3 text-sm focus:outline-none"
+                        placeholder="Your name"
+                      />
+                    </BackgroundGradient>
+                  </label>
+                  <label className="block">
+                    <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Email</span>
+                    <BackgroundGradient containerClassName="rounded-xl mt-1" className="rounded-xl bg-background/80">
+                      <input
+                        required
+                        type="email"
+                        value={form.email}
+                        onChange={(e) => setForm({ ...form, email: e.target.value })}
+                        className="w-full rounded-xl bg-transparent px-4 py-3 text-sm focus:outline-none"
+                        placeholder="you@email.com"
+                      />
+                    </BackgroundGradient>
+                  </label>
+                </div>
                 <label className="block">
-                  <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Name</span>
-                  <input
-                    required
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="mt-1 w-full rounded-xl bg-input/40 border border-border px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none transition"
-                    placeholder="Your name"
-                  />
+                  <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Message</span>
+                  <BackgroundGradient containerClassName="rounded-xl mt-1" className="rounded-xl bg-background/80">
+                    <textarea
+                      required
+                      rows={5}
+                      value={form.message}
+                      onChange={(e) => setForm({ ...form, message: e.target.value })}
+                      className="w-full rounded-xl bg-transparent px-4 py-3 text-sm focus:outline-none resize-none"
+                      placeholder="Tell me about your project..."
+                    />
+                  </BackgroundGradient>
                 </label>
-                <label className="block">
-                  <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Email</span>
-                  <input
-                    required
-                    type="email"
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="mt-1 w-full rounded-xl bg-input/40 border border-border px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none transition"
-                    placeholder="you@email.com"
-                  />
-                </label>
-              </div>
-              <label className="block">
-                <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Message</span>
-                <textarea
-                  required
-                  rows={5}
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="mt-1 w-full rounded-xl bg-input/40 border border-border px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none transition resize-none"
-                  placeholder="Tell me about your project..."
-                />
-              </label>
-              <button
-                type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary via-[oklch(0.6_0.26_270)] to-accent animate-gradient px-6 py-3 text-sm font-semibold text-primary-foreground glow-primary hover:scale-[1.01] transition-transform"
-              >
-                {sent ? "✓ Opening your email…" : "Send Message →"}
-              </button>
-            </form>
+                <BackgroundGradient containerClassName="rounded-xl" className="rounded-xl bg-background/80">
+                  <button
+                    type="submit"
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary via-[oklch(0.6_0.26_270)] to-accent animate-gradient px-6 py-3 text-sm font-semibold text-primary-foreground glow-primary hover:scale-[1.01] transition-transform"
+                  >
+                    {sent ? "✓ Opening your email…" : "Send Message →"}
+                  </button>
+                </BackgroundGradient>
+              </form>
+            </BackgroundGradient>
           </Reveal>
         </div>
       </div>
