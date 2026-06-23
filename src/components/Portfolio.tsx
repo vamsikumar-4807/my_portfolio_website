@@ -8,7 +8,7 @@ import { BackgroundGradient } from "@/components/ui/background-gradient";
 
 const LOGO_URL = "https://tapportfolio.lovable.app/assets/logo-CxDGoOCE.png";
 const RESUME_URL = "https://drive.google.com/file/d/1oAEQIdaHGvbKKwlSQkrQ8yJhDEfxwG5u/view?usp=drive_link";
-const PROFILE_URL = "https://drive.google.com/thumbnail?id=1De4ytzLdjci1RqVzNa2hUOLYUxjaUAb2&sz=w800";
+const PROFILE_URL = "https://drive.google.com/thumbnail?id=1vRxWV-gieITdmAnJPaOE77UNqJUBbPtf&sz=w800";
 const VIDEO_URL = "https://www.pexels.com/download/video/19660176/";
 
 const TYPING_ROLES = ["Java Full Stack Web Developer", "Frontend Developer", "Java Developer"];
