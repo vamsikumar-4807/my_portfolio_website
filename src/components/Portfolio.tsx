@@ -929,7 +929,8 @@ function CTAContact() {
               ].map((c) => {
                 const Inner = (
                   <Tilt>
-                    <div className="glass-strong rounded-2xl p-5 flex items-center gap-4 hover:border-primary/40 border border-transparent transition-colors">
+                    <BackgroundGradient containerClassName="rounded-2xl" className="rounded-2xl bg-background/80">
+                    <div className="rounded-2xl p-5 flex items-center gap-4">
                       <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center font-display font-bold">
                         {c.i}
                       </div>
@@ -938,6 +939,7 @@ function CTAContact() {
                         <div className="font-medium truncate">{c.v}</div>
                       </div>
                     </div>
+                    </BackgroundGradient>
                   </Tilt>
                 );
                 return c.h ? (
