@@ -805,13 +805,15 @@ function Education() {
                   </div>
                   <div className="md:w-1/2 md:px-8">
                     <Tilt>
-                      <div className="glass-strong rounded-2xl p-6 hover:border-primary/40 border border-transparent transition-colors">
+                      <BackgroundGradient containerClassName="rounded-2xl" className="rounded-2xl bg-background/80">
+                      <div className="rounded-2xl p-6">
                         <div className="text-xs font-mono text-accent uppercase tracking-widest">{e.status}</div>
                         <h3 className="mt-2 font-display text-lg font-semibold">{e.degree}</h3>
                         <div className="text-sm text-foreground/80 mt-1">{e.institute}</div>
                         <div className="text-xs text-muted-foreground font-mono mt-1">{e.location}</div>
                         {e.description && <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{e.description}</p>}
                       </div>
+                      </BackgroundGradient>
                     </Tilt>
                   </div>
                 </div>
