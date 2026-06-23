@@ -734,7 +734,8 @@ function Projects() {
                 transition={{ duration: 0.4, delay: i * 0.06 }}
               >
                 <Tilt>
-                  <div className="glass-strong rounded-2xl overflow-hidden h-full flex flex-col border border-transparent hover:border-primary/40 transition-all group">
+                  <BackgroundGradient containerClassName="rounded-2xl h-full" className="rounded-2xl h-full bg-background">
+                  <div className="rounded-2xl overflow-hidden h-full flex flex-col group">
                     <div className="relative h-44 overflow-hidden bg-gradient-to-br from-primary/30 via-[oklch(0.5_0.2_270)]/20 to-accent/30">
                       <div className="absolute inset-0 grid-bg opacity-30" />
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -770,6 +771,7 @@ function Projects() {
                       </div>
                     </div>
                   </div>
+                  </BackgroundGradient>
                 </Tilt>
               </motion.div>
             ))}
