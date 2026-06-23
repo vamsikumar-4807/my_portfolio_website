@@ -538,7 +538,7 @@ function Hero() {
           </motion.div>
 
           {/* Profile */}
-          <motion.div style={{ y: y2 }} className="relative flex justify-center lg:justify-end">
+          <motion.div style={{ y: y2 }} className="relative flex justify-center lg:justify-end mt-10 md:mt-12 lg:mt-14">
             <div className="relative">
               {/* Rotating gradient ring */}
               <div className="absolute inset-0 -m-6 animate-spin-slow opacity-70">
