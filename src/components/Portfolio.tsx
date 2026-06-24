@@ -783,12 +783,12 @@ function Projects() {
                       </div>
                       <div className="mt-5 flex gap-2">
                         {p.live && (
-                          <a href={p.live} target="_blank" rel="noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-gradient-to-r from-primary to-accent px-3 py-2 text-xs font-semibold text-primary-foreground hover:scale-[1.02] transition-transform">
+                          <a href={p.live} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(p.live!, "_blank", "noopener,noreferrer"); }} className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg bg-gradient-to-r from-primary to-accent px-3 py-2 text-xs font-semibold text-primary-foreground hover:scale-[1.02] transition-transform cursor-pointer relative z-20">
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
                             Live
                           </a>
                         )}
-                        <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg glass px-3 py-2 text-xs font-semibold hover:bg-primary/10 transition-colors">
+                        <a href={p.github} target="_blank" rel="noopener noreferrer" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(p.github, "_blank", "noopener,noreferrer"); }} className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-lg glass px-3 py-2 text-xs font-semibold hover:bg-primary/10 transition-colors cursor-pointer relative z-20">
                           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.22c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.13-4.56-5.04 0-1.11.39-2.02 1.03-2.74-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.4 9.4 0 0112 6.84c.85 0 1.71.12 2.51.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.74 0 3.92-2.34 4.78-4.57 5.03.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.02 10.02 0 0022 12.22C22 6.58 17.52 2 12 2z"/></svg>
                           Code
                         </a>
@@ -866,7 +866,8 @@ function Certifications() {
                   href={c.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block rounded-2xl p-6 h-full group"
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(c.link, "_blank", "noopener,noreferrer"); }}
+                  className="block rounded-2xl p-6 h-full group cursor-pointer relative z-20"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-lg shadow-lg shadow-primary/30">
