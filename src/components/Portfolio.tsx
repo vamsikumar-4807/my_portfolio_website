@@ -1045,7 +1045,6 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-4 md:px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="TAP Academy" className="h-8" />
             <div className="text-xs text-muted-foreground font-mono">
               © {new Date().getFullYear()} Vamsi Kumar Dusanapudi
             </div>
