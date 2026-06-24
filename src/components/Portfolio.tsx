@@ -502,7 +502,7 @@ function Hero() {
 
             <Reveal delay={0.1}>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
-                Hi, I'm <span className="gradient-text glow-text">Vamsi Kumar</span>
+                Hi, I'm <span className="gradient-text glow-text animate-name-glow">Vamsi Kumar</span>
                 <br />
                 <span className="text-foreground/90">Dusanapudi</span>
               </h1>
