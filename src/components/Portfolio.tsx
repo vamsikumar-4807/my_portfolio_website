@@ -504,7 +504,7 @@ function Hero() {
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
                 Hi, I'm <span className="gradient-text glow-text animate-name-glow">Vamsi Kumar</span>
                 <br />
-                <span className="text-foreground/90">Dusanapudi</span>
+                <span className="gradient-text glow-text animate-name-glow">Dusanapudi</span>
               </h1>
             </Reveal>
 
