@@ -14,7 +14,8 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart({
       // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-      server: { entry: "server" },
+      // Use Vercel preset so Nitro outputs a Vercel-compatible serverless bundle.
+      server: { entry: "server", preset: "vercel" },
     }),
     react(),
   ],
