@@ -1,10 +1,24 @@
-<!-- LOVABLE:BEGIN -->
-> [!IMPORTANT]
-> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
-> published git history — force pushing, or rebasing/amending/squashing commits
-> that are already pushed — as it rewrites history on Lovable's side and the
-> user will likely lose their project history.
->
-> Commits you push to the connected branch sync back to Lovable and show up in
-> the editor, so keep the branch in a working state.
-<!-- LOVABLE:END -->
+# Portfolio Project
+
+This is the personal portfolio of **Vamsi Kumar Dusanapudi**, built with TanStack Start, React, TailwindCSS v4, and Vite.
+
+## Tech Stack
+- React 19 + TypeScript
+- TanStack Start (SSR) + TanStack Router
+- TailwindCSS v4 + shadcn/ui
+- Framer Motion animations
+- Vite 8
+
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+npm run preview
+```

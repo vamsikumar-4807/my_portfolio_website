@@ -6,7 +6,7 @@ import { BackgroundGradient } from "@/components/ui/background-gradient";
 /* Data                                                                       */
 /* -------------------------------------------------------------------------- */
 
-const LOGO_URL = "https://tapportfolio.lovable.app/assets/logo-CxDGoOCE.png";
+
 const RESUME_URL = "https://drive.google.com/file/d/1oAEQIdaHGvbKKwlSQkrQ8yJhDEfxwG5u/view?usp=drive_link";
 const PROFILE_URL = "https://drive.google.com/thumbnail?id=1vRxWV-gieITdmAnJPaOE77UNqJUBbPtf&sz=w800";
 const VIDEO_URL = "https://www.pexels.com/download/video/19660176/";

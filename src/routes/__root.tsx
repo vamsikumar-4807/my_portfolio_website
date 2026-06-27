@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+
 
 function NotFoundComponent() {
   return (
@@ -38,7 +38,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    console.error("[ErrorBoundary]", error);
   }, [error]);
 
   return (
@@ -79,16 +79,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Vamsi Kumar Dusanapudi" },
       { name: "description", content: "A single-page, responsive student portfolio website showcasing skills, projects, and education." },
-      { name: "author", content: "Lovable" },
+      { name: "author", content: "Vamsi Kumar Dusanapudi" },
       { property: "og:title", content: "Vamsi Kumar Dusanapudi" },
       { property: "og:description", content: "A single-page, responsive student portfolio website showcasing skills, projects, and education." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Vamsi Kumar Dusanapudi" },
       { name: "twitter:description", content: "A single-page, responsive student portfolio website showcasing skills, projects, and education." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9dfc1ff5-3bb2-4dc1-8298-0121cabd8427/id-preview-bf032945--4ded875a-531d-4867-a86a-3c56192e18f4.lovable.app-1782241892718.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9dfc1ff5-3bb2-4dc1-8298-0121cabd8427/id-preview-bf032945--4ded875a-531d-4867-a86a-3c56192e18f4.lovable.app-1782241892718.png" },
     ],
     links: [
       {
